@@ -79,6 +79,6 @@ public class App {
         s3Client.close();;
 
         System.out.println("Connection closed");
-        System.out.println("Existing...");
+        System.out.println("Exiting...");
     }
 }
