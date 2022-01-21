@@ -26,14 +26,14 @@ public class ScanFriends {
 
         String DATE_FORMAT = "MM-dd";
         DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-        DateTimeFormatter dateFormat8 = DateTimeFormatter.ofPattern(DATE_FORMAT);
+//        DateTimeFormatter dateFormat8 = DateTimeFormatter.ofPattern(DATE_FORMAT);
 
         Date currentDate = new Date();
         System.out.println("date : " + dateFormat.format(currentDate));
         LocalDateTime localDateTime = currentDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-        System.out.println("localDateTime : " + dateFormat8.format(localDateTime));
+        System.out.println("localDateTime : " + dateFormat.format(localDateTime));
 
-        String date = dateFormat8.format(localDateTime);
+        String date = dateFormat.format(localDateTime);
         System.out.println(date);
 
         DynamoDbClient dynamoDbClient = DynamoDbClient.builder()
