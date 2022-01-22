@@ -22,7 +22,7 @@ public class PublishTextSMS {
                 .build();
 
         final String message = "New item with ID " + id + " added to DynamoDB table";
-        final String phoneNumber = "+5551997592757";
+        final String phoneNumber = "+16175550100";
 
         try {
             final PublishRequest request = PublishRequest.builder()
